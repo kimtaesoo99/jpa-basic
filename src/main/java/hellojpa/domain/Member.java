@@ -1,10 +1,7 @@
 package hellojpa.domain;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Member {
@@ -12,9 +9,14 @@ public class Member {
     @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
+
+    @Column(name = "username")
     private String name;
+
     private String city;
+
     private String street;
+
     private String zipcode;
 
     public Long getId() {
